@@ -70,9 +70,9 @@ Before you begin, ensure you have met the following requirements:
 
 ### Steps to Clone and Run the Project
 
-1. **Clone the Repository**: git clone https://github.com/heshamerfan97/portfoliio.git
+1. **Clone the Repository**: git clone https://github.com/heshamerfan97/flutter_portfoliio.git
 2. **Install Packages/Dependencies**: run _flutter pub get_
-3. **Run the application**: run ** _flutter run_
+3. **Run the application**: run _flutter run_
 
 
 
