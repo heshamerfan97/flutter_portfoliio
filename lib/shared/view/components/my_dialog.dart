@@ -44,9 +44,9 @@ class MyDialog {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisSize: MainAxisSize.min,
                 children: [
-                  Text(title, style: TextStyles.largeBlackStyle, textAlign: TextAlign.start,),
+                  Text(title, style: TextStyles.boldText, textAlign: TextAlign.start,),
                   const VerticalSpace(10),
-                  Text(subtitle, style: (greySubtitle ? TextStyles.baseDisableText : TextStyles.baseBlackText).copyWith(fontSize: 13), textAlign: TextAlign.start,),
+                  Text(subtitle, style: (greySubtitle ? TextStyles.boldDisableText : TextStyles.boldText).copyWith(fontSize: 13), textAlign: TextAlign.start,),
                   const VerticalSpace(30),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.end,
@@ -73,7 +73,7 @@ class MyDialog {
                             onTap: () async {
                               positiveTodo();
                             },
-                            color: Palette.primary,
+                            color: Palette.getSecondaryColor(),
                             text: positiveResponseText,
                             isActive: true),
                       ),

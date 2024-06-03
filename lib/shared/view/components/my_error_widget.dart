@@ -28,7 +28,7 @@ class MyErrorWidget extends StatelessWidget {
                 },
                 child: Padding(
               padding: const EdgeInsets.all(32.0),
-              child: Text("${errorMessage??"MsgGenericError".localize()}\n${"MsgRefresh".localize()}", style: TextStyles.largePrimaryStyle, textAlign: TextAlign.center,),
+              child: Text("${errorMessage??"MsgGenericError".localize()}\n${"MsgRefresh".localize()}", style: TextStyles.boldLargePrimaryText, textAlign: TextAlign.center,),
             )),
           ],
         ),

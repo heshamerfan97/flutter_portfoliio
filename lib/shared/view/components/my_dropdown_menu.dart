@@ -66,10 +66,10 @@ class _HenkelDropdownMenuState<T> extends State<HenkelDropdownMenu> {
             child: ButtonTheme(
               alignedDropdown: true,
               child: DropdownButton<T>(
-                iconEnabledColor: Palette.primary,
+                iconEnabledColor: Palette.getSecondaryColor(),
           items: widget.items as List<DropdownMenuItem<T>>,
           isExpanded: widget.expanded,
-          style: TextStyles.baseBlackText,
+          style: TextStyles.boldText,
           onChanged: !widget.enabled
                 ? null
                 : (item) {

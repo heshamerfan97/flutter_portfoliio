@@ -1,15 +1,19 @@
-import '../../../application/application.dart';
-import '../../../config/constants.dart';
-
 class Images {
   static const base = 'assets/images';
+  static const projects = 'assets/images/projects';
 
   static const logo = '$base/logo.png';
-  static const male = '$base/male.png';
-  static const female = '$base/female.png';
+  static const me = '$base/me.png';
+  static const dashtar = '$base/dashtar.png';
+  static const googleMapsFlutter = '$base/google_maps_flutter.png';
 
-  static String prepareNetworkImage(String path) {
-    return '${Application.debug ? Constants.debugBaseUrl : Constants.releaseBaseUrl}$path';
-  }
+
+  ///Projects Images
+  static const stellaStays = '$projects/stella_stays.webp';
+  static const maestroHCM = '$projects/maestro_hcm.webp';
+  static const islamicApp = '$projects/islamic_app.webp';
+  static const jeel = '$projects/jeel.webp';
+  static const sporsepeti = '$projects/sporsepeti.webp';
+  static const cluerush = '$projects/cluerush.webp';
 
 }

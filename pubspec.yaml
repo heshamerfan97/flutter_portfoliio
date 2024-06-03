@@ -1,5 +1,5 @@
 name: portfolio
-description: "A new Flutter project."
+description: "A Flutter web app showcasing how to build a responsive portfolio website for various screen sizes and operating systems. This project features animations and a sleek design, highlighting Flutter's capabilities in creating versatile and visually appealing web applications."
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 
 version: 1.0.0+1
@@ -20,9 +20,6 @@ dependencies:
   bloc: ^8.1.4
   flutter_bloc: ^8.1.5
 
-  # local storage
-  shared_preferences: ^2.2.3
-
   #Connections
   dio: ^5.4.3+1
   connectivity_plus: ^6.0.3
@@ -30,17 +27,13 @@ dependencies:
   #UI
   fluttericon: ^2.0.0
   fluttertoast: ^8.2.5
-  shimmer: ^3.0.0
   flutter_svg: ^2.0.10+1
   cached_network_image: ^3.3.1
   rive: ^0.13.5
+  scrollable_positioned_list: ^0.3.8
 
   #Tools
   intl: ^0.19.0
-  permission_handler: ^11.3.1
-  equatable: ^2.0.5
-  share_plus: ^9.0.0
-  url_launcher: ^6.2.6
 
 
 
@@ -60,33 +53,28 @@ flutter:
     - assets/
     - assets/locales/
     - assets/images/
+    - assets/images/projects/
     - assets/rives/
     - assets/icons/
     - assets/fonts/
     - assets/svgs/
 
-  # An image asset can refer to one or more resolution-specific "variants", see
-  # https://flutter.dev/assets-and-images/#resolution-aware
-
-  # For details regarding adding assets from package dependencies, see
-  # https://flutter.dev/assets-and-images/#from-packages
-
-  # To add custom fonts to your application, add a fonts section here,
-  # in this "flutter" section. Each entry in this list should have a
-  # "family" key with the font family name, and a "fonts" key with a
-  # list giving the asset and other descriptors for the font. For
-  # example:
-  # fonts:
-  #   - family: Schyler
-  #     fonts:
-  #       - asset: fonts/Schyler-Regular.ttf
-  #       - asset: fonts/Schyler-Italic.ttf
-  #         style: italic
-  #   - family: Trajan Pro
-  #     fonts:
-  #       - asset: fonts/TrajanPro.ttf
-  #       - asset: fonts/TrajanPro_Bold.ttf
-  #         weight: 700
-  #
-  # For details regarding fonts from package dependencies,
-  # see https://flutter.dev/custom-fonts/#from-packages
+  fonts:
+    - family: cairo
+      fonts:
+        - asset: assets/fonts/cairo/cairo_extra_light.ttf
+          weight: 200
+        - asset: assets/fonts/cairo/cairo_light.ttf
+          weight: 300
+        - asset: assets/fonts/cairo/cairo_regular.ttf
+          weight: 400
+        - asset: assets/fonts/cairo/cairo_medium.ttf
+          weight: 500
+        - asset: assets/fonts/cairo/cairo_semi_bold.ttf
+          weight: 600
+        - asset: assets/fonts/cairo/cairo_bold.ttf
+          weight: 700
+        - asset: assets/fonts/cairo/cairo_extra_bold.ttf
+          weight: 800
+        - asset: assets/fonts/cairo/cairo_black.ttf
+          weight: 900

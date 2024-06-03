@@ -6,57 +6,24 @@ class TextStyles {
   static const currentFont = 'segoe_ui';
 
   ///Base Styles
-  static const baseWhiteText = TextStyle(
-    color: Palette.white,
+  static const boldText = TextStyle(
     fontSize: 15,
     fontWeight: FontWeight.bold,
   );
-
-  static const basePrimaryStyle = TextStyle(
-    color: Palette.primary,
+  static TextStyle boldPrimaryText = TextStyle(
+    color: Palette.getPrimaryColor(),
     fontSize: 15,
     fontWeight: FontWeight.bold,
   );
-
-  static const baseDisableText = TextStyle(
+  static TextStyle boldSecondaryText = TextStyle(
+    color: Palette.getSecondaryColor(),
+    fontSize: 15,
+    fontWeight: FontWeight.bold,
+  );
+  static const boldDisableText = TextStyle(
     color: Palette.grey,
     fontSize: 15,
     fontWeight: FontWeight.bold,
-  );
-
-  static const baseBlackText = TextStyle(
-    color: Palette.black,
-    fontSize: 15,
-    fontWeight: FontWeight.bold,
-  );
-
-
-  static const baseLightBlueStyle = TextStyle(
-    color: Palette.secondaryBlue,
-    fontSize: 15,
-    fontFamily: currentFont,
-    fontWeight: FontWeight.bold,
-  );
-
-  static const baseGreenStyle = TextStyle(
-    color: Palette.secondaryGreen,
-    fontSize: 15,
-    fontFamily: currentFont,
-    fontWeight: FontWeight.bold,
-  );
-  static const baseNormalWhiteText = TextStyle(
-    color: Palette.white,
-    fontSize: 15,
-  );
-
-  static const baseNormalDisableText = TextStyle(
-    color: Palette.grey,
-    fontSize: 15,
-  );
-
-  static const baseNormalBlackText = TextStyle(
-    color: Palette.black,
-    fontSize: 15,
   );
 
   ///Large Styles
@@ -67,103 +34,84 @@ class TextStyles {
     fontWeight: FontWeight.bold,
   );
 
-  static const largePrimaryStyle = TextStyle(
-    color: Palette.primary,
+  static const boldLargeText = TextStyle(
     fontSize: 20,
+    fontWeight: FontWeight.bold,
+  );
+  static TextStyle boldLargePrimaryText = TextStyle(
+    color: Palette.getPrimaryColor(),
+    fontSize: 20,
+    fontWeight: FontWeight.bold,
+  );
+  static TextStyle boldLargeSecondaryText = TextStyle(
+    color: Palette.getSecondaryColor(),
+    fontSize: 20,
+    fontWeight: FontWeight.bold,
+  );
+
+  /// Very Large Styles
+  static const veryLargeDisableStyle = TextStyle(
+    color: Palette.grey,
+    fontSize: 40,
     fontFamily: currentFont,
     fontWeight: FontWeight.bold,
   );
 
-  static const largeWhiteStyle = TextStyle(
-    color: Palette.white,
-    fontSize: 20,
-    fontFamily: currentFont,
+  static const boldVeryLargeText = TextStyle(
+    fontSize: 40,
     fontWeight: FontWeight.bold,
   );
-
-  static const largeBlackStyle = TextStyle(
-    color: Palette.black,
-    fontSize: 20,
-    fontFamily: currentFont,
+  static TextStyle boldVeryLargePrimaryText = TextStyle(
+    color: Palette.getPrimaryColor(),
+    fontSize: 40,
     fontWeight: FontWeight.bold,
   );
-
-  static const largeSecondaryGreenStyle = TextStyle(
-    color: Palette.secondaryGreen,
-    fontSize: 20,
-    fontFamily: currentFont,
-    fontWeight: FontWeight.bold,
-  );
-
-  static const largeSecondaryBlueStyle = TextStyle(
-    color: Palette.secondaryBlue,
-    fontSize: 20,
-    fontFamily: currentFont,
+  static TextStyle boldVeryLargeSecondaryText = TextStyle(
+    color: Palette.getSecondaryColor(),
+    fontSize: 40,
     fontWeight: FontWeight.bold,
   );
 
   ///Mid Styles
-  static const midWhiteStyle = TextStyle(
-    color: Palette.white,
+  static const boldMidText = TextStyle(
     fontSize: 11,
-    fontFamily: currentFont,
     fontWeight: FontWeight.bold,
   );
-
-  static const midBlackStyle = TextStyle(
-    color: Palette.black,
+  static TextStyle boldMidPrimaryText = TextStyle(
+    color: Palette.getPrimaryColor(),
     fontSize: 11,
-    fontFamily: currentFont,
     fontWeight: FontWeight.bold,
   );
-
-  static const midSecondaryBlueStyle = TextStyle(
-    color: Palette.secondaryBlue,
+  static TextStyle boldMidSecondaryText = TextStyle(
+    color: Palette.getSecondaryColor(),
     fontSize: 11,
-    fontFamily: currentFont,
-    fontWeight: FontWeight.bold,
-  );
-
-  static const midDisableStyle = TextStyle(
-    color: Palette.darkGrey,
-    fontSize: 11,
-    fontFamily: currentFont,
     fontWeight: FontWeight.bold,
   );
 
 
   ///Small Styles
-  static const smallBlueStyle = TextStyle(
-    color: Palette.secondaryBlue,
+  static const boldSmallStyle = TextStyle(
     fontSize: 6,
-    fontFamily: currentFont,
+    fontWeight: FontWeight.bold,
+  );
+  static TextStyle boldSmallPrimaryText = TextStyle(
+    color: Palette.getPrimaryColor(),
+    fontSize: 6,
+    fontWeight: FontWeight.bold,
+  );
+  static TextStyle boldSmallSecondaryText = TextStyle(
+    color: Palette.getSecondaryColor(),
+    fontSize: 6,
     fontWeight: FontWeight.bold,
   );
 
-  ///Specific Styles
-  static const appBarStyle = TextStyle(
-    color: Palette.primary,
-    fontSize: 14,
-    fontWeight: FontWeight.bold,
-  );
 
-  static const buttonTextStyle = TextStyle(
-    color: Palette.white,
-    fontSize: 20,
-    fontWeight: FontWeight.normal,
-  );
-
+  /// Others
   static const hintStyle = TextStyle(
     color: Palette.grey,
     fontSize: 15,
     fontWeight: FontWeight.normal,
   );
 
-  static navBarTextStyle([bool selected = false]) => TextStyle(
-        color: selected ? Palette.primary : const Color(0xFF979797),
-        fontSize: selected ? 12 : 10,
-        fontFamily: currentFont,
-        fontWeight: FontWeight.bold,
-      );
 
 }

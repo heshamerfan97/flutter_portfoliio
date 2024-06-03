@@ -8,7 +8,7 @@ class MyButton extends StatelessWidget {
     Key? key,
     required this.onTap,
     required this.text,
-    required this.isActive,
+    this.isActive = true,
     this.isText = true,
     this.child,
     this.style,
@@ -18,6 +18,7 @@ class MyButton extends StatelessWidget {
     this.color,
     this.borderColor,
     this.imageColor,
+    this.gradient,
     this.hasBorder = false,
   }) : super(key: key);
   final void Function() onTap;
@@ -29,10 +30,11 @@ class MyButton extends StatelessWidget {
   final Color? color, borderColor, imageColor;
   final TextStyle? style;
   final bool hasBorder;
+  final Gradient? gradient;
 
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
+    return InkWell(
       onTap: isActive ? onTap : null,
       child: Container(
         height: height,
@@ -40,15 +42,16 @@ class MyButton extends StatelessWidget {
         alignment: Alignment.center,
         padding: EdgeInsets.symmetric(vertical: 0, horizontal: padding ?? 20),
         decoration: BoxDecoration(
-            color: isActive ? (color ?? Palette.secondaryGreen) : Colors.grey.withOpacity(0.5),
-            borderRadius: const BorderRadius.all(Radius.circular(10.0)),
+          gradient: gradient,
+            color: isActive ? (color ?? Palette.getSecondaryColor()) : Colors.grey.withOpacity(0.5),
+            borderRadius: const BorderRadius.all(Radius.circular(50.0)),
             border: hasBorder ? Border.all(color: borderColor ?? Palette.white) : null),
         child: isText
             ? FittedBox(
               child: Text(
                   text.localize(),
                   textAlign: TextAlign.center,
-                  style: style ?? TextStyles.buttonTextStyle,
+                  style: style ?? TextStyles.boldText,
                 ),
             )
             : child,

@@ -96,7 +96,7 @@ class _MyTextFieldState extends State<MyTextField> {
           focusedBorder: (widget.underlined ? underlinedBorder : outlinedBorder)
               .copyWith(borderSide: BorderSide(width: widget.borderWidth * 2)),
           labelText: widget.label,
-          labelStyle: TextStyles.baseLightBlueStyle,
+          labelStyle: TextStyles.boldPrimaryText,
           suffixIcon: widget.obscure
               ? InkWell(
                   onTap: () {
@@ -126,7 +126,7 @@ class _MyTextFieldState extends State<MyTextField> {
         validator: widget.validator,
         onChanged: widget.onChanged,
         onTap: widget.onTap,
-        style: widget.textStyle ?? TextStyles.baseBlackText,
+        style: widget.textStyle ?? TextStyles.boldText,
         enabled: widget.enabled,
         inputFormatters: [
          if(widget.maxLength!=null) LengthLimitingTextInputFormatter(widget.maxLength),

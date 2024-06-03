@@ -35,7 +35,7 @@ class MAppBar extends StatelessWidget implements PreferredSizeWidget {
       leadingWidth: 80,
       centerTitle: true,
       title: Text(title),
-      titleTextStyle: TextStyles.largeBlackStyle,
+      titleTextStyle: TextStyles.boldLargeText,
       actions: [
         if (trailing != null) trailing!,
       ],

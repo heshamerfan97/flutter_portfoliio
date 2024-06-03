@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:portfolio/shared/view/helper/export.dart';
 
 class SplashLoadingIndicator extends StatelessWidget {
-  const SplashLoadingIndicator({required this.width, this.time = 4, super.key});
+  const SplashLoadingIndicator({required this.width, this.time = 2, super.key});
 
   final double width;
   final int time;
@@ -30,9 +30,9 @@ class SplashLoadingIndicator extends StatelessWidget {
             Text(
               '${(value * 100).toInt()}%',
               style:
-              const TextStyle(fontWeight: FontWeight.bold, shadows: [
-                Shadow(color: Palette.primary, blurRadius: 10, offset: Offset(2, 2)),
-                Shadow(color: Palette.secondaryBlue, blurRadius: 10, offset: Offset(-2, -2)),
+              TextStyle(fontWeight: FontWeight.bold, shadows: [
+                Shadow(color: Palette.getSecondaryColor(), blurRadius: 10, offset: Offset(2, 2)),
+                const Shadow(color: Palette.secondaryBlue, blurRadius: 10, offset: Offset(-2, -2)),
               ]),
             )
           ],

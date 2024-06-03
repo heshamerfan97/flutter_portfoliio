@@ -1,3 +1,17 @@
 {
-
+  "LblTabHome": "Home",
+  "LblTabProjects": "Projects",
+  "LblTabRepos": "Repositories",
+  "LblTabContact": "Contact",
+  "LblTxtHesham": "Hesham",
+  "LblTxtErfan": "Erfan",
+  "BtnContactMe": "Contact Me",
+  "LblTitleHey": "Hey there,",
+  "LblTitleItsHeshamErfan": "It's Hesham Erfan",
+  "LblIntroSubtitle": "A senior software engineer specializing in Flutter and mobile development. Explore my projects, skills, and professional journey. Feel free to reach out for collaborations. Enjoy your visit!",
+  "BtnLetsTalk": "Let's talk",
+  "BtnMyResume": "My Resume",
+  "LblTitleMyProjects": "My Projects",
+  "LblTitleMyRepos": "My Repos",
+  "BtnViewOnStore": "View on Store"
 }

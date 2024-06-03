@@ -3,20 +3,17 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:fluttertoast/fluttertoast.dart';
-import 'package:portfolio/modules/main/ui/screens/main_screen.dart';
+import 'package:portfolio/modules/main/ui/screens/application_screen.dart';
 import 'package:portfolio/utils/string_extensions.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 
 import 'app_bloc.dart';
 import 'application/application.dart';
-import 'application/application_bloc/application_bloc.dart';
 import 'config/routes.dart';
 import 'language/app_language.dart';
 import 'language/language_bloc/language_bloc.dart';
 import 'shared/controllers/connectivity_controller.dart';
 import 'shared/controllers/error_cubit.dart';
 import 'shared/controllers/loading_cubit.dart';
-import 'shared/services/preferences/preferences_utils.dart';
 import 'shared/services/sailor.dart';
 import 'shared/view/components/loading_widget.dart';
 import 'theme/theme_collection.dart';
@@ -48,7 +45,6 @@ class AppBlocObserver extends BlocObserver {
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  PreferencesUtils.preferences = await SharedPreferences.getInstance();
   Bloc.observer = AppBlocObserver();
   runApp(const MyApp());
 }
@@ -64,7 +60,7 @@ class _MyAppState extends State<MyApp> {
 
   @override
   void initState() {
-    AppBloc.applicationBloc.add(OnSetupApplication());
+    AppBloc.applicationCubit.init();
     super.initState();
   }
 
@@ -78,9 +74,10 @@ class _MyAppState extends State<MyApp> {
       child: BlocBuilder<LanguageBloc, LanguageState>(builder: (context, lang) {
         return BlocBuilder<ThemeCubit, ThemeData>(builder: (context, themeData) {
           return MaterialApp(
+            title: "Flutter Portfolio",
             debugShowCheckedModeBanner: false,
             theme: ThemeCollection().lightThemeData,
-            darkTheme: ThemeCollection().darkThemeData,
+            darkTheme: ThemeCollection().lightThemeData,
             locale: lang is LanguageUpdated?lang.language.locale:AppLanguage.defaultLanguage?.locale,
             navigatorKey: Sailor.navigatorKey,
             localizationsDelegates: const [
@@ -127,7 +124,7 @@ class _MyAppState extends State<MyApp> {
                                 )).then((value) => isConnectivityDialogShown = false);
                       }
                     },
-                    child: const MainScreen(),
+                    child: const ApplicationScreen(),
                   ),
                 ),
               ),

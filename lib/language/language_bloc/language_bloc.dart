@@ -6,8 +6,6 @@ import 'package:bloc/bloc.dart';
 import 'package:meta/meta.dart';
 
 import '../../application/application.dart';
-import '../../shared/services/preferences/preferences.dart';
-import '../../shared/services/preferences/preferences_utils.dart';
 import '../../utils/logger.dart';
 import '../app_language.dart';
 import '../language.dart';
@@ -54,10 +52,6 @@ class LanguageBloc extends Bloc<LanguageEvent, LanguageState> {
           final success = await load(event.language.locale);
           if (success) {
             AppLanguage.defaultLanguage = event.language;
-
-            ///Preference save
-            await PreferencesUtils.setString(
-                Preferences.language, event.language.locale.languageCode);
           }
           //TODO: load needed screens when change language
           //AppBloc.homeCubit.loadHome();

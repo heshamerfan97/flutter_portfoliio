@@ -4,11 +4,7 @@ import 'package:portfolio/shared/view/helper/export.dart';
 import '../shared/view/helper/palette.dart';
 
 class ThemeCollection {
-  static const primaryColor = Color(0xFFF7EFE0);
-  static const lightPrimaryColor = Color(0xFFFFFFFF);
 
-  static const lightBackgroundColor = Color(0xFFAFDDE5);
-  static const darkBackgroundColor = Color(0xFF141619);
 
 
 
@@ -18,16 +14,16 @@ class ThemeCollection {
         100: Color(0xFFfaf5ec),
         200: Color(0xFFf9f2e6),
         300: Color(0xFFf8f1e3),
-        400: primaryColor,
+        400: Palette.primaryLight,
         500: Color(0xFFded7ca),
         600: Color(0xFFc6bfb3),
         700: Color(0xFFada79d),
         800: Color(0xFF948f86),
         900: Color(0xFF4a4843),
       }),
-      //fontFamily: font,
+      fontFamily: "cairo",
       brightness: Brightness.light,
-      primaryColor: primaryColor,
+      primaryColor: Palette.primaryLight,
       textTheme: const TextTheme(
         bodyLarge: TextStyle(color: Palette.black),
         bodyMedium: TextStyle(color: Palette.black),
@@ -48,21 +44,21 @@ class ThemeCollection {
       primaryColorLight: const Color(0xFF8c97d3),
       primaryColorDark: const Color(0xFF2d397f),
       canvasColor: const Color(0xffffffff),
-      scaffoldBackgroundColor: lightBackgroundColor,
+      scaffoldBackgroundColor: Palette.backgroundLight,
       cardColor: const Color(0xffffffff),
-      dividerColor: const Color(0x1f000000),
+      dividerColor: Palette.grey,
       highlightColor: const Color(0x66bcbcbc),
       splashColor: const Color(0x66c8c8c8),
       unselectedWidgetColor: const Color(0x8a000000),
       disabledColor: const Color(0x61000000),
       secondaryHeaderColor: const Color(0xfffcebe9),
       textSelectionTheme: const TextSelectionThemeData(
-        selectionColor: primaryColor,
+        selectionColor: Palette.primaryLight,
         cursorColor: Color(0xFF2d397f),
-        selectionHandleColor: primaryColor,
+        selectionHandleColor: Palette.primaryLight,
       ),
-      dialogBackgroundColor: lightBackgroundColor,
-      indicatorColor: primaryColor,
+      dialogBackgroundColor: Palette.backgroundLight,
+      indicatorColor: Palette.primaryLight,
       hintColor: const Color(0x8a000000),
       buttonTheme: const ButtonThemeData(
         textTheme: ButtonTextTheme.accent,
@@ -79,7 +75,7 @@ class ThemeCollection {
             Radius.circular(8),
           ),
         ),
-        buttonColor: primaryColor,
+        buttonColor: Palette.primaryLight,
         disabledColor: Color(0x61000000),
         highlightColor: Color(0x29000000),
         splashColor: Color(0x1f000000),
@@ -102,7 +98,7 @@ class ThemeCollection {
         labelPadding: EdgeInsets.only(left: 8, right: 8),
         labelStyle: TextStyle(
           fontSize: 12,
-          //fontFamily: font,
+          fontFamily: "cairo",
           color: Colors.black,
           fontWeight: FontWeight.w400,
           fontStyle: FontStyle.normal,
@@ -110,7 +106,7 @@ class ThemeCollection {
         padding: EdgeInsets.all(4),
         secondaryLabelStyle: TextStyle(
           fontSize: 12,
-          //fontFamily: font,
+          fontFamily: "cairo",
           color: Colors.black,
           fontWeight: FontWeight.w400,
           fontStyle: FontStyle.normal,
@@ -138,11 +134,11 @@ class ThemeCollection {
         ),
       ),
       textButtonTheme: TextButtonThemeData(
-          style: ButtonStyle(foregroundColor: MaterialStateProperty.all<Color>(Palette.primary))),
+          style: ButtonStyle(foregroundColor: WidgetStateProperty.all<Color>(Palette.primaryLight))),
       colorScheme: const ColorScheme.light(
-          primary: Color(0xFF0FA4AF), brightness: Brightness.light, secondary: Palette.primary, surface: Palette.lightGrey, error: Color(0xffd32f2f)),
+          primary: Color(0xFF0FA4AF), brightness: Brightness.light, secondary: Palette.primaryLight, surface: Palette.grey, error: Color(0xffd32f2f)),
       bottomSheetTheme: const BottomSheetThemeData(
-        backgroundColor: lightBackgroundColor,
+        backgroundColor: Palette.backgroundLight,
       ), bottomAppBarTheme: const BottomAppBarTheme(color: Color(0xffffffff)));
 
   final darkThemeData = ThemeData(
@@ -151,16 +147,16 @@ class ThemeCollection {
       100: Color(0xffe6e6e6),
       200: Color(0xffcccccc),
       300: Color(0xffb3b3b3),
-      400: primaryColor,
+      400: Palette.primaryDark,
       500: Color(0xff808080),
       600: Color(0xff666666),
       700: Color(0xff4d4d4d),
       800: Color(0xff333333),
       900: Color(0xff191919)
     }),
-    //fontFamily: font,
+    fontFamily: "cairo",
     brightness: Brightness.dark,
-    primaryColor: primaryColor,
+    primaryColor: Palette.primaryDark,
     textTheme: const TextTheme(
       bodyLarge: TextStyle(color: Palette.white),
       bodyMedium: TextStyle(color: Palette.white),
@@ -181,21 +177,21 @@ class ThemeCollection {
     primaryColorLight: const Color(0xFF8c97d3),
     primaryColorDark: const Color(0xFF2d397f),
     canvasColor: Colors.grey[900],
-    scaffoldBackgroundColor: darkBackgroundColor,
+    scaffoldBackgroundColor: Palette.backgroundDark,
     cardColor: const Color(0xff424242),
-    dividerColor: const Color(0x1fffffff),
+    dividerColor: Palette.grey,
     highlightColor: const Color(0x40cccccc),
     splashColor: const Color(0x40cccccc),
     unselectedWidgetColor: const Color(0xb3ffffff),
     disabledColor: const Color(0x62ffffff),
     secondaryHeaderColor: const Color(0xff616161),
     textSelectionTheme: const TextSelectionThemeData(
-      selectionColor: primaryColor,
+      selectionColor: Palette.primaryDark,
       cursorColor: Color(0xFF2d397f),
-      selectionHandleColor: primaryColor,
+      selectionHandleColor: Palette.primaryDark,
     ),
-    dialogBackgroundColor: darkBackgroundColor,
-    indicatorColor: primaryColor,
+    dialogBackgroundColor: Palette.backgroundDark,
+    indicatorColor: Palette.primaryDark,
     hintColor: const Color(0x80ffffff),
     appBarTheme: AppBarTheme(
       color: Colors.grey[900],
@@ -215,7 +211,7 @@ class ThemeCollection {
           Radius.circular(8),
         ),
       ),
-      buttonColor: primaryColor,
+      buttonColor: Palette.primaryDark,
       disabledColor: Color(0x61ffffff),
       highlightColor: Color(0x29ffffff),
       splashColor: Color(0x1fffffff),
@@ -238,7 +234,7 @@ class ThemeCollection {
       labelPadding: EdgeInsets.only(left: 8, right: 8),
       labelStyle: TextStyle(
         fontSize: 12,
-        //fontFamily: font,
+        fontFamily: "cairo",
         color: Color(0xb3ffffff),
         fontWeight: FontWeight.w400,
         fontStyle: FontStyle.normal,
@@ -246,7 +242,7 @@ class ThemeCollection {
       padding: EdgeInsets.all(4),
       secondaryLabelStyle: TextStyle(
         fontSize: 12,
-        //fontFamily: font,
+        fontFamily: "cairo",
         color: Color(0xb3ffffff),
         fontWeight: FontWeight.w400,
         fontStyle: FontStyle.normal,
@@ -273,11 +269,11 @@ class ThemeCollection {
         borderRadius: BorderRadius.circular(8),
       ),
     ),
-    bottomSheetTheme: const BottomSheetThemeData(backgroundColor: darkBackgroundColor),
+    bottomSheetTheme: const BottomSheetThemeData(backgroundColor: Palette.backgroundDark),
     textButtonTheme:
-    TextButtonThemeData(style: ButtonStyle(foregroundColor: MaterialStateProperty.all<Color>(primaryColor))),
+    TextButtonThemeData(style: ButtonStyle(foregroundColor: WidgetStateProperty.all<Color>(Palette.primaryDark))),
     colorScheme:
-    const ColorScheme.dark(primary: Color(0xFF0FA4AF), brightness: Brightness.dark, secondary: Palette.primary, error: Color(0xffd32f2f), surface: Color(0xFFB3B4BD)), bottomAppBarTheme: const BottomAppBarTheme(color: Color(0xff424242)),
+    const ColorScheme.dark(primary: Color(0xFF0FA4AF), brightness: Brightness.dark, secondary: Palette.primaryDark, error: Color(0xffd32f2f), surface: Color(0xFFB3B4BD)), bottomAppBarTheme: const BottomAppBarTheme(color: Color(0xff424242)),
   );
 
 
