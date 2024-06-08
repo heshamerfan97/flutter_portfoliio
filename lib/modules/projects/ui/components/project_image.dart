@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:portfolio/application/application.dart';
 
 import '../../../../shared/view/helper/palette.dart';
 
@@ -16,7 +17,7 @@ class ProjectImage extends StatelessWidget {
       width: imageSize,
       child: Container(
           decoration: BoxDecoration(
-            gradient: Palette.gradientPrimary,
+            gradient: Application.deviceDarkTheme?Palette.gradientBlue:Palette.gradientPrimary,
             borderRadius: BorderRadius.circular(35)
           ),
           padding: const EdgeInsets.all(4),

@@ -6,7 +6,7 @@ import 'package:logging/logging.dart';
 import 'package:flutter/foundation.dart';
 
 class Logger {
-  static const String tag = "Henkel App:";
+  static const String tag = "Flutter Portfolio:";
 
   /// Normal Text
   static log(dynamic msg, {String tag = tag}) {

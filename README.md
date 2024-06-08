@@ -13,8 +13,8 @@ You can find a live version of this project as website on [Click to view the Por
 - ~~Projects~~
 - ~~Repositories~~
 - ~~Contacts~~
-- Vlogs
-- Dark Theme
+- ~~Dark Theme~~
+- Blogs
 - Localization
 - Unit Testing
 - Widget Testing

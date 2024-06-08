@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/shared/view/helper/export.dart';
 
+import '../../../../application/application.dart';
+
 class HomeProfileImageWidget extends StatelessWidget {
   const HomeProfileImageWidget({super.key});
 
@@ -23,13 +25,13 @@ class HomeProfileImageWidget extends StatelessWidget {
               child: Container(
                 padding: const EdgeInsets.fromLTRB(24, 24, 24, 0),
                 height: 280,
-                decoration: const BoxDecoration(
-                  borderRadius: BorderRadius.only(
+                decoration: BoxDecoration(
+                  borderRadius: const BorderRadius.only(
                     bottomLeft: Radius.circular(200),
                     bottomRight: Radius.circular(400),
                     topLeft: Radius.circular(400),
                   ),
-                  gradient: Palette.gradientPrimary,
+                  gradient: Application.deviceDarkTheme?Palette.gradientBlue:Palette.gradientPrimary,
                 ),
               ),
             ),

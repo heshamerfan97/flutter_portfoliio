@@ -20,8 +20,6 @@ class Application {
   static bool isArabic = AppLanguage.defaultLanguage?.locale.languageCode == 'ar';
   static bool deviceDarkTheme = false;
 
-  static bool darkTheme = false;
-
 
   ///Singleton factory
   static final Application _instance = Application._internal();

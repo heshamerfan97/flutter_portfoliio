@@ -2,6 +2,7 @@ import 'dart:html' as html;
 import 'package:flutter/material.dart';
 import 'package:portfolio/modules/contacts/models/contact.dart';
 
+import '../../../../application/application.dart';
 import '../../../../shared/view/helper/palette.dart';
 import '../../../../shared/view/helper/space.dart';
 import '../../../../shared/view/helper/text_styles.dart';
@@ -21,7 +22,7 @@ class ContactTile extends StatelessWidget {
           onTap: () => html.window.open(contact.url, 'new tab'),
           child: ShaderMask(
             blendMode: BlendMode.srcIn,
-            shaderCallback: (bounds) => Palette.gradientPrimary.createShader(
+            shaderCallback: (bounds) => (Application.deviceDarkTheme?Palette.gradientBlue:Palette.gradientPrimary).createShader(
               Rect.fromLTWH(0, 0, bounds.width, bounds.height),
             ),
             child: Row(

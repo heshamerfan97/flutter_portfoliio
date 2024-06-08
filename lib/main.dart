@@ -1,4 +1,5 @@
 import 'package:connectivity_plus/connectivity_plus.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
@@ -77,7 +78,7 @@ class _MyAppState extends State<MyApp> {
             title: "Flutter Portfolio",
             debugShowCheckedModeBanner: false,
             theme: ThemeCollection().lightThemeData,
-            darkTheme: ThemeCollection().lightThemeData,
+            darkTheme: ThemeCollection().darkThemeData,
             locale: lang is LanguageUpdated?lang.language.locale:AppLanguage.defaultLanguage?.locale,
             navigatorKey: Sailor.navigatorKey,
             localizationsDelegates: const [
@@ -114,7 +115,7 @@ class _MyAppState extends State<MyApp> {
                     listenWhen: (oldState, newState) => oldState != newState,
                     listener: (context, connectivityState) {
                       if (connectivityState != ConnectivityResult.wifi &&
-                          connectivityState != ConnectivityResult.mobile && !isConnectivityDialogShown) {
+                          connectivityState != ConnectivityResult.mobile && !isConnectivityDialogShown && !kIsWeb ) {
                         isConnectivityDialogShown = true;
                         showDialog(
                             context: context,

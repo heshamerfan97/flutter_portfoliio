@@ -14,7 +14,7 @@ class Palette {
   static const Color primaryDark = Color(0xFFB8D3D1);
   static const Color secondaryDark = Color(0xFF136F63);*/
 
-  static const Color backgroundDark = Color(0xFFFAFAFA);
+  static const Color backgroundDark = Color(0xFF2C2E3A);
   static const Color primaryDark = Color(0xFF3c6e71);
   static const Color secondaryDark = Color(0xFF284b63);
 
@@ -41,6 +41,6 @@ class Palette {
   static const Color yellow = Color(0xFFFFC007);
   static const Color grey = Color(0xFF8D8D8D);
 
-  static Color getPrimaryColor() => Application.darkTheme?primaryDark:primaryLight;
-  static Color getSecondaryColor() => Application.darkTheme?secondaryDark:secondaryLight;
+  static Color getPrimaryColor() => Application.deviceDarkTheme?primaryDark:primaryLight;
+  static Color getSecondaryColor() => Application.deviceDarkTheme?secondaryDark:secondaryLight;
 }

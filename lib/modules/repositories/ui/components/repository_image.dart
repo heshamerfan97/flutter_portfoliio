@@ -5,6 +5,8 @@ import 'package:fluttericon/font_awesome_icons.dart';
 import 'package:portfolio/modules/repositories/models/git_repository.dart';
 import 'package:portfolio/shared/view/helper/export.dart';
 
+import '../../../../application/application.dart';
+
 class RepositoryImage extends StatelessWidget {
   const RepositoryImage(this.repository, {this.fullScreen = true, super.key});
 
@@ -25,7 +27,7 @@ class RepositoryImage extends StatelessWidget {
               Positioned.fill(
                 child: Container(
                   decoration: BoxDecoration(
-                    gradient: Palette.gradientPrimary,
+                    gradient: Application.deviceDarkTheme?Palette.gradientBlue:Palette.gradientPrimary,
                     borderRadius: BorderRadius.circular(35)
                   ),
                   padding: const EdgeInsets.all(4),
