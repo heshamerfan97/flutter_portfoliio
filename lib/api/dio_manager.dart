@@ -94,8 +94,6 @@ class DIOManger {
 
   static bool isConnected() {
     if (!AppBloc.connectivityCubit.isConnected) {
-      ToastUtils.hideToast();
-      ToastUtils.showToast('MsgNoInternetConnection'.localize());
       return false;
     } else {
       return true;
